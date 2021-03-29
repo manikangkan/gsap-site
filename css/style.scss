@@ -1,0 +1,130 @@
+html[class="light-mode"] {
+  --bg-1: #fff;
+  --bg-2: #f5f5f5;
+  --bg-3: #0099ff;
+  --bg-4: #fff;
+  --bg-5: #e7e7e7;
+  --text: black;
+  --text2: #fff;
+}
+
+html {
+  --bg-1: #2c2c2c;
+  --bg-2: #343434;
+  --bg-3: #0099ff;
+  --bg-4: #6c6c6c;
+  --bg-5: #525252;
+  --text: white;
+  --text2: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito";
+  color: var(--text);
+}
+
+body {
+  background: var(--bg-2);
+  overflow-x: hidden;
+  height: 110vh;
+}
+
+svg {
+  text-align: center;
+  width: 150%;
+  position: absolute;
+  left: -45%;
+  top: -5%;
+  width: 150%;
+  z-index: 0;
+}
+
+.content {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 65%;
+  z-index: 1;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+.quote-container {
+  margin: 1rem 0 1.5rem;
+  display: flex;
+  place-content: center;
+  width: 100%;
+
+  .avatar {
+    margin: 0.2rem 0.2rem 0 0;
+
+    img {
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+    }
+  }
+
+  p {
+    margin: 0 0.5rem 1rem;
+    text-align: left;
+    span {
+      opacity: 0.8;
+      font-weight: 200;
+    }
+  }
+}
+
+.cta {
+  display: inline-block;
+  background: var(--bg-3);
+  color: var(--text2);
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--bg-3);
+  }
+}
+
+@media screen and (min-width: 855px) {
+  html {
+    font-size: 1.3rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .content {
+    text-align: left;
+    width: 80%;
+    margin: 10rem auto 0 auto;
+  }
+
+  h1 {
+    width: 50%;
+  }
+
+  svg {
+    left: unset;
+    right: -5%;
+    top: -8%;
+    width: 72rem;
+  }
+
+  .quote-container {
+    display: flex;
+    place-content: unset;
+  }
+}
